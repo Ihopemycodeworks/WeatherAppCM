@@ -30,73 +30,22 @@
       <main>
         <div class="weather-app-data">
           <div>
-            <h1 class="weather-app-city" id="city"></h1>
+            <h1 class="weather-app-city" id="city">Paris</h1>
             <p class="weather-app-details">
-              <span id="time"></span>,
-              <span id="description"></span>
+              <span id="time">Wednesday 9:32</span>,
+              <span id="description">light intensity drizzle rain</span>
               <br />
-              Humidity: <strong id="humidity"></strong>, Wind:
-              <strong id="wind-speed"></strong>
+              Humidity: <strong id="humidity">96%</strong>, Wind:
+              <strong id="wind-speed">2.06km/h</strong>
             </p>
           </div>
           <div class="weather-app-temperature-container">
-            <div id="icon"></div>
-            <div class="weather-app-temperature" id="temperature"></div>
+            <div id="icon">🌧️</div>
+            <div class="weather-app-temperature" id="temperature">5</div>
             <div class="weather-app-unit">°C</div>
           </div>
         </div>
-        <div class="weather-forecast">
-          <div class="weather-forecast-day">
-            <div class="weather-forecast-date">Tue</div>
-            <div class="weather-forecast-icon">🌤️</div>
-            <div class="weather-forecast-temperatures">
-              <div class="weather-forecast-temperature">
-                <strong>15º</strong>
-              </div>
-              <div class="weather-forecast-temperature">9º</div>
-            </div>
-          </div>
-          <div class="weather-forecast-day">
-            <div class="weather-forecast-date">Wed</div>
-            <div class="weather-forecast-icon">🌤️</div>
-            <div class="weather-forecast-temperatures">
-              <div class="weather-forecast-temperature">
-                <strong>15º</strong>
-              </div>
-              <div class="weather-forecast-temperature">9º</div>
-            </div>
-          </div>
-          <div class="weather-forecast-day">
-            <div class="weather-forecast-date">Wed</div>
-            <div class="weather-forecast-icon">🌤️</div>
-            <div class="weather-forecast-temperatures">
-              <div class="weather-forecast-temperature">
-                <strong>15º</strong>
-              </div>
-              <div class="weather-forecast-temperature">9º</div>
-            </div>
-          </div>
-          <div class="weather-forecast-day">
-            <div class="weather-forecast-date">Wed</div>
-            <div class="weather-forecast-icon">🌤️</div>
-            <div class="weather-forecast-temperatures">
-              <div class="weather-forecast-temperature">
-                <strong>15º</strong>
-              </div>
-              <div class="weather-forecast-temperature">9º</div>
-            </div>
-          </div>
-          <div class="weather-forecast-day">
-            <div class="weather-forecast-date">Wed</div>
-            <div class="weather-forecast-icon">🌤️</div>
-            <div class="weather-forecast-temperatures">
-              <div class="weather-forecast-temperature">
-                <strong>15º</strong>
-              </div>
-              <div class="weather-forecast-temperature">9º</div>
-            </div>
-          </div>
-        </div>
+        <div class="weather-forecast" id="forecast-container"></div>
       </main>
 
       <footer>
@@ -107,11 +56,40 @@
           >open-sourced on GitHub</a
         >
         and
-        <a href="https://weatherappcm.netlify.app/" target="_blank"
+        <a href="https://meteoappcmfinalproject.netlify.app/" target="_blank"
           >hosted on Netlify</a
         >
       </footer>
     </div>
-    <script src="src/index.js"></script>
+    <script>
+      // Example forecast data
+      const forecastData = [
+        { day: "Wed", icon: "🌧️", maxTemp: 11, minTemp: 5 },
+        { day: "Thu", icon: "❄️", maxTemp: 11, minTemp: 3 },
+        { day: "Fri", icon: "❄️", maxTemp: 4, minTemp: 1 },
+        { day: "Sat", icon: "🌥️", maxTemp: 5, minTemp: 2 },
+        { day: "Sun", icon: "☀️", maxTemp: 4, minTemp: 1 },
+      ];
+
+      const forecastContainer = document.getElementById("forecast-container");
+
+      forecastData.forEach((forecast) => {
+        const forecastElement = document.createElement("div");
+        forecastElement.classList.add("weather-forecast-day");
+
+        forecastElement.innerHTML = `
+          <div class="weather-forecast-date">${forecast.day}</div>
+          <div class="weather-forecast-icon">${forecast.icon}</div>
+          <div class="weather-forecast-temperatures">
+            <div class="weather-forecast-temperature">
+              <strong>${forecast.maxTemp}º</strong>
+            </div>
+            <div class="weather-forecast-temperature">${forecast.minTemp}º</div>
+          </div>
+        `;
+
+        forecastContainer.appendChild(forecastElement);
+      });
+    </script>
   </body>
 </html>
