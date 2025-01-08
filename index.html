@@ -81,7 +81,7 @@
         document.getElementById("time").textContent = new Date(data.time * 1000).toLocaleString();
         document.getElementById("description").textContent = data.condition.description;
         document.getElementById("humidity").textContent = `${data.temperature.humidity}%`;
-        document.getElementById("wind-speed").textContent = `${data.wind.speed} km/h`;
+        document.getElementById("wind-speed").textContent = `${data.wind.speed.toFixed(1)} km/h`;
         document.getElementById("temperature").textContent = Math.round(data.temperature.current);
         document.getElementById("icon").textContent = getWeatherIcon(data.condition.icon);
       }
@@ -92,15 +92,20 @@
 
         forecast.forEach((day, index) => {
           if (index < 5) {
+            const dayName = new Date(day.time * 1000).toLocaleDateString('en-US', { weekday: 'short' });
+            const maxTemp = Math.round(day.temperature.maximum);
+            const minTemp = Math.round(day.temperature.minimum);
+            const icon = getWeatherIcon(day.condition.icon);
+
             forecastContainer.innerHTML += `
               <div class="weather-forecast-day">
-                <div class="weather-forecast-date">${new Date(day.time * 1000).toLocaleDateString('en-US', { weekday: 'short' })}</div>
-                <div class="weather-forecast-icon">${getWeatherIcon(day.condition.icon)}</div>
+                <div class="weather-forecast-date">${dayName}</div>
+                <div class="weather-forecast-icon">${icon}</div>
                 <div class="weather-forecast-temperatures">
                   <div class="weather-forecast-temperature">
-                    <strong>${Math.round(day.temperature.maximum)}º</strong>
+                    <strong>${maxTemp}º</strong>
                   </div>
-                  <div class="weather-forecast-temperature">${Math.round(day.temperature.minimum)}º</div>
+                  <div class="weather-forecast-temperature">${minTemp}º</div>
                 </div>
               </div>
             `;
