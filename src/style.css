@@ -22,29 +22,33 @@ header {
 }
 
 .search-form {
-  display: flex;
-  gap: 10px; /* Spacing between the input and button */
+  display: flex; /* Align items horizontally */
+  gap: 10px; /* Space between input and button */
   align-items: center; /* Align items vertically */
+  justify-content: space-between; /* Ensure proper alignment */
+  width: 100%; /* Make the form stretch across the container */
 }
 
 .search-form-input {
   background-color: #f9f7fe;
   border: none;
   border-radius: 6px;
-  width: 70%;
+  flex: 1; /* Let the input take up the available space */
   font-size: 16px;
   padding: 15px 20px;
 }
 
 .search-form-button {
   background: #885df1;
-  padding: 15px 30px;
+  padding: 15px 20px;
   border: none;
   font-size: 16px;
   border-radius: 6px;
   color: white;
   cursor: pointer;
+  white-space: nowrap; /* Prevent text from breaking */
 }
+
 
 main {
   padding: 30px 0;
