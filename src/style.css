@@ -32,8 +32,9 @@ header {
 
 .search-form {
   display: flex;
-  justify-content: center;
+  align-items: center;
   gap: 5px;
+  justify-content: center;
 }
 
 .search-form-input {
@@ -121,6 +122,42 @@ main {
   color: rgba(39, 33, 66, 0.6);
 }
 
+/* Styles for the forecast section */
+.forecast {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 20px;
+  overflow-x: auto;
+  padding: 10px 0;
+}
+
+.forecast-day {
+  text-align: center;
+  flex: 0 0 auto;
+  width: 80px;
+  background: #f9f7fe;
+  border-radius: 8px;
+  padding: 10px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.forecast-day img {
+  width: 50px;
+  height: 50px;
+}
+
+.forecast-day h4 {
+  font-size: 14px;
+  margin: 5px 0;
+  color: #271c40;
+}
+
+.forecast-day span {
+  font-size: 12px;
+  color: rgba(39, 33, 66, 0.6);
+}
+
 footer {
   border-top: 1px solid #f9f7fe;
   padding: 30px 0 0 0;
@@ -133,6 +170,11 @@ footer {
 footer a {
   color: #885df1;
 }
+
+footer a:hover {
+  text-decoration: underline;
+}
+
 
 footer a:hover {
   text-decoration: underline;
