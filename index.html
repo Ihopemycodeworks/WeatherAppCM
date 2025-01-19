@@ -6,7 +6,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="src/style.css" />
@@ -24,93 +24,46 @@
             id="search-form-input"
             class="search-form-input"
           />
-          <input type="submit" value="Search" class="search-form-button" />
+          <button type="submit" class="search-form-button">Search</button>
         </form>
       </header>
       <main>
-        <div class="weather-app-data">
-          <div>
-            <h1 class="weather-app-city" id="city"></h1>
-            <p class="weather-app-details">
-              <span id="time"></span>,
-              <span id="description"></span>
-              <br />
-              Humidity: <strong id="humidity"></strong>, Wind:
-              <strong id="wind-speed"></strong>
-            </p>
-          </div>
-          <div class="weather-app-temperature-container">
-            <div id="icon"></div>
-            <div class="weather-app-temperature" id="temperature"></div>
-            <div class="weather-app-unit">°C</div>
-          </div>
-        </div>
-        <div class="weather-forecast">
-          <div class="weather-forecast-day">
-            <div class="weather-forecast-date">Tue</div>
-            <div class="weather-forecast-icon">🌤️</div>
-            <div class="weather-forecast-temperatures">
-              <div class="weather-forecast-temperature">
-                <strong>15º</strong>
-              </div>
-              <div class="weather-forecast-temperature">9º</div>
+        <div class="current-weather">
+          <h1 class="city-name" id="city"></h1>
+          <p id="date"></p>
+          <div class="weather-details">
+            <div class="temperature">
+              <span id="temperature"></span>°C
             </div>
-          </div>
-          <div class="weather-forecast-day">
-            <div class="weather-forecast-date">Wed</div>
-            <div class="weather-forecast-icon">🌤️</div>
-            <div class="weather-forecast-temperatures">
-              <div class="weather-forecast-temperature">
-                <strong>15º</strong>
-              </div>
-              <div class="weather-forecast-temperature">9º</div>
-            </div>
-          </div>
-          <div class="weather-forecast-day">
-            <div class="weather-forecast-date">Wed</div>
-            <div class="weather-forecast-icon">🌤️</div>
-            <div class="weather-forecast-temperatures">
-              <div class="weather-forecast-temperature">
-                <strong>15º</strong>
-              </div>
-              <div class="weather-forecast-temperature">9º</div>
-            </div>
-          </div>
-          <div class="weather-forecast-day">
-            <div class="weather-forecast-date">Wed</div>
-            <div class="weather-forecast-icon">🌤️</div>
-            <div class="weather-forecast-temperatures">
-              <div class="weather-forecast-temperature">
-                <strong>15º</strong>
-              </div>
-              <div class="weather-forecast-temperature">9º</div>
-            </div>
-          </div>
-          <div class="weather-forecast-day">
-            <div class="weather-forecast-date">Wed</div>
-            <div class="weather-forecast-icon">🌤️</div>
-            <div class="weather-forecast-temperatures">
-              <div class="weather-forecast-temperature">
-                <strong>15º</strong>
-              </div>
-              <div class="weather-forecast-temperature">9º</div>
+            <div class="icon" id="icon"></div>
+            <div class="details">
+              <p id="description"></p>
+              <p>Humidity: <span id="humidity"></span>%</p>
+              <p>Wind: <span id="wind-speed"></span> km/h</p>
             </div>
           </div>
         </div>
+        <div class="forecast" id="forecast"></div>
       </main>
-
       <footer>
-        This project was coded by
-        <a href="https://github.com/Ihopemycodeworks" target="_blank"> Chandani Master </a>,
-        is
-        <a href="https://github.com/Ihopemycodeworks" target="_blank"
-          >open-sourced on GitHub</a
-        >
-        and
-        <a href="https://meteoappcmfinalproject.netlify.app/" target="_blank"
-          >hosted on Netlify</a
-        >
+        <p>
+          This project was coded by
+          <a href="https://github.com/Ihopemycodeworks" target="_blank"
+            >Chandani Master</a
+          >,
+          <a href="https://github.com/Ihopemycodeworks" target="_blank"
+            >open-sourced on GitHub</a
+          >, and
+          <a href="https://meteoappcmfinalproject.netlify.app/" target="_blank"
+            >hosted on Netlify</a
+          >.
+        </p>
       </footer>
+    </div>
+    <script src="src/index.js"></script>
+  </body>
+</html>
+
     </div>
     <script src="src/index.js"></script>
   </body>
