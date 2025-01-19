@@ -21,6 +21,11 @@ header {
   padding: 0 0 30px 0;
 }
 
+.search-form {
+  display: flex;
+  align-items: center;
+}
+
 .search-form-input {
   background-color: #f9f7fe;
   border: none;
@@ -86,6 +91,39 @@ main {
   font-size: 28px;
 }
 
+/* Updated forecast container */
+.forecast {
+  display: flex;
+  gap: 10px; /* Add spacing between items */
+  margin-top: 20px;
+}
+
+.forecast-day {
+  text-align: center;
+  flex: 0 0 auto; /* Prevent items from shrinking */
+  width: 100px;
+  padding: 10px;
+  background: #f9f7fe;
+  border-radius: 8px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.forecast-day img {
+  width: 50px;
+  height: 50px;
+}
+
+.forecast-day h4 {
+  font-size: 14px;
+  margin: 5px 0;
+  color: #271c40;
+}
+
+.forecast-day span {
+  font-size: 12px;
+  color: rgba(39, 33, 66, 0.6);
+}
+
 footer {
   border-top: 1px solid #f9f7fe;
   padding: 30px 0 0 0;
@@ -93,3 +131,4 @@ footer {
   font-size: 14px;
   color: rgba(0, 0, 0, 0.6);
 }
+
