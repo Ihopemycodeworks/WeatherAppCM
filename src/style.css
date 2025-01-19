@@ -1,10 +1,17 @@
 body {
   background-color: #f9f7fe;
   font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
 a {
   color: #885df1;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
 }
 
 .weather-app {
@@ -14,20 +21,34 @@ a {
   box-shadow: 0 30px 50px rgba(65, 50, 100, 0.08);
   border-radius: 16px;
   padding: 30px;
+  overflow: hidden;
 }
 
 header {
   border-bottom: 1px solid #f9f7fe;
   padding: 0 0 30px 0;
+  margin-bottom: 20px;
+}
+
+.search-form {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
 }
 
 .search-form-input {
   background-color: #f9f7fe;
   border: none;
   border-radius: 6px;
-  width: 80%;
+  width: 70%;
   font-size: 16px;
   padding: 15px 20px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  color: #271c40;
+}
+
+.search-form-input::placeholder {
+  color: rgba(39, 33, 66, 0.4);
 }
 
 .search-form-button {
@@ -35,9 +56,14 @@ header {
   padding: 15px 30px;
   border: none;
   font-size: 16px;
-  margin-left: 5px;
   border-radius: 6px;
   color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.search-form-button:hover {
+  background: #7449d6;
 }
 
 main {
@@ -47,19 +73,22 @@ main {
 .weather-app-data {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .weather-app-city {
   margin: 0;
   font-size: 38px;
   line-height: 48px;
+  color: #271c40;
 }
 
 .weather-app-details {
   font-size: 16px;
-  color: rgba(39, 33, 66, 0.4);
+  color: rgba(39, 33, 66, 0.6);
   line-height: 24px;
   font-weight: 500;
+  margin-top: 10px;
 }
 
 .weather-app-details strong {
@@ -68,9 +97,12 @@ main {
 
 .weather-app-temperature-container {
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
-.weather-app-icon {
+.weather-app-icon img {
   width: 88px;
   height: 88px;
 }
@@ -79,11 +111,14 @@ main {
   font-size: 88px;
   line-height: 88px;
   font-weight: bold;
+  color: #271c40;
+  margin: 10px 0;
 }
 
-.weatehr-app-unit {
+.weather-app-unit {
   margin-top: 6px;
   font-size: 28px;
+  color: rgba(39, 33, 66, 0.6);
 }
 
 footer {
@@ -92,4 +127,13 @@ footer {
   text-align: center;
   font-size: 14px;
   color: rgba(0, 0, 0, 0.6);
+  margin-top: 20px;
+}
+
+footer a {
+  color: #885df1;
+}
+
+footer a:hover {
+  text-decoration: underline;
 }
