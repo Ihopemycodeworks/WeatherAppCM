@@ -1,17 +1,10 @@
 body {
   background-color: #f9f7fe;
   font-family: "Roboto", sans-serif;
-  margin: 0;
-  padding: 0;
 }
 
 a {
   color: #885df1;
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
 }
 
 .weather-app {
@@ -21,35 +14,20 @@ a:hover {
   box-shadow: 0 30px 50px rgba(65, 50, 100, 0.08);
   border-radius: 16px;
   padding: 30px;
-  overflow: hidden;
 }
 
 header {
   border-bottom: 1px solid #f9f7fe;
   padding: 0 0 30px 0;
-  margin-bottom: 20px;
-}
-
-.search-form {
-  display: flex;
-  align-items: center;
-  gap: 5px;
-  justify-content: center;
 }
 
 .search-form-input {
   background-color: #f9f7fe;
   border: none;
   border-radius: 6px;
-  width: 70%;
+  width: 80%;
   font-size: 16px;
   padding: 15px 20px;
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-  color: #271c40;
-}
-
-.search-form-input::placeholder {
-  color: rgba(39, 33, 66, 0.4);
 }
 
 .search-form-button {
@@ -57,14 +35,9 @@ header {
   padding: 15px 30px;
   border: none;
   font-size: 16px;
+  margin-left: 5px;
   border-radius: 6px;
   color: white;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.search-form-button:hover {
-  background: #7449d6;
 }
 
 main {
@@ -74,22 +47,19 @@ main {
 .weather-app-data {
   display: flex;
   justify-content: space-between;
-  align-items: center;
 }
 
 .weather-app-city {
   margin: 0;
   font-size: 38px;
   line-height: 48px;
-  color: #271c40;
 }
 
 .weather-app-details {
   font-size: 16px;
-  color: rgba(39, 33, 66, 0.6);
+  color: rgba(39, 33, 66, 0.4);
   line-height: 24px;
   font-weight: 500;
-  margin-top: 10px;
 }
 
 .weather-app-details strong {
@@ -98,12 +68,9 @@ main {
 
 .weather-app-temperature-container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
 }
 
-.weather-app-icon img {
+.weather-app-icon {
   width: 88px;
   height: 88px;
 }
@@ -112,50 +79,11 @@ main {
   font-size: 88px;
   line-height: 88px;
   font-weight: bold;
-  color: #271c40;
-  margin: 10px 0;
 }
 
 .weather-app-unit {
   margin-top: 6px;
   font-size: 28px;
-  color: rgba(39, 33, 66, 0.6);
-}
-
-/* Styles for the forecast section */
-.forecast {
-  display: flex;
-  justify-content: space-between;
-  gap: 10px;
-  margin-top: 20px;
-  overflow-x: auto;
-  padding: 10px 0;
-}
-
-.forecast-day {
-  text-align: center;
-  flex: 0 0 auto;
-  width: 80px;
-  background: #f9f7fe;
-  border-radius: 8px;
-  padding: 10px;
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.forecast-day img {
-  width: 50px;
-  height: 50px;
-}
-
-.forecast-day h4 {
-  font-size: 14px;
-  margin: 5px 0;
-  color: #271c40;
-}
-
-.forecast-day span {
-  font-size: 12px;
-  color: rgba(39, 33, 66, 0.6);
 }
 
 footer {
@@ -164,18 +92,4 @@ footer {
   text-align: center;
   font-size: 14px;
   color: rgba(0, 0, 0, 0.6);
-  margin-top: 20px;
-}
-
-footer a {
-  color: #885df1;
-}
-
-footer a:hover {
-  text-decoration: underline;
-}
-
-
-footer a:hover {
-  text-decoration: underline;
 }
