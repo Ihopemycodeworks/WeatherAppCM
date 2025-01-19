@@ -95,6 +95,29 @@ main {
   margin-top: 6px;
   font-size: 28px;
 }
+.forecast-container {
+  display: flex; /* Align items in a horizontal row */
+  gap: 15px; /* Space between each day's forecast */
+  overflow-x: auto; /* Allow scrolling if needed */
+  padding: 15px 0;
+}
+
+.forecast-day {
+  text-align: center; /* Center-align text and icons */
+  flex: 1; /* Ensure equal spacing between items */
+  min-width: 100px; /* Minimum width for each day */
+}
+
+.forecast-day img {
+  width: 50px; /* Size of the weather icon */
+  height: 50px;
+  margin-bottom: 10px;
+}
+
+.forecast-day p {
+  margin: 5px 0;
+  font-size: 16px; /* Adjust text size */
+}
 
 footer {
   border-top: 1px solid #f9f7fe;
